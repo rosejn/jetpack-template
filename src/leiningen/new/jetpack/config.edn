@@ -1,0 +1,11 @@
+{
+  ; Per component configuration:
+  :http {:port 8080}
+  :router {}
+  :loader {:page-dir "pages"}
+
+  :nomad/environments {
+   "development"  {:debug-mode? true}
+   "production"   (:debug-mode? false)
+  }
+}
