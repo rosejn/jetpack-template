@@ -2,10 +2,12 @@
   (:gen-class)
   (:require
     [com.stuartsierra.component :as component]
+    [taoensso.timbre :as log]
     [{{name}}.config :refer [CONFIG]]
-    [jetpack.system :refer [jetpack-system]]))
+    [{{name}}.system :refer [{{name}}-system]]))
 
 
 (defn -main [& args]
+  (log/info "Starting {{raw-name}} system...")
   (component/start
-    (jetpack-system (CONFIG))))
+    ({{name}}-system (CONFIG))))

@@ -29,7 +29,7 @@
   :plugins [[lein-daemon "0.5.4"]
             [lein-ring "0.8.8"]]
 
-  :daemon {:site {:ns jetpack.main
+  :daemon {:site {:ns {{name}}.main
                   :pidfile "{{name}}.pid"}}
 
   :ring {:handler {{name}}.site/app
